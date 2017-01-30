@@ -43,7 +43,7 @@ const App = ()  => {
 }
 
 App.navigationOptions = {
-  tabBar: {
+  drawer: {
       icon: () => (
         <Image
           source={require('../imgs/home.png')}

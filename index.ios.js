@@ -3,7 +3,7 @@ import {
   AppRegistry,
 } from 'react-native';
 import App from './src/App'
-import { TabNavigator } from 'react-navigation';
+import { DrawerNavigator } from 'react-navigation';
 import SecondScreen from './src/SecondScreen'
 
 class reactNavigationSample extends Component {
@@ -17,7 +17,7 @@ class reactNavigationSample extends Component {
   }
 }
 
-const SimpleApp = TabNavigator({
+const SimpleApp = DrawerNavigator({
   Home: { screen: App },
   SecondScreen: { screen: SecondScreen }
 });

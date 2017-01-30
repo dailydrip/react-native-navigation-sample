@@ -35,7 +35,7 @@ const SecondScreen = ()  => {
 }
 
 SecondScreen.navigationOptions = {
-  tabBar: {
+  drawer: {
       icon: () => (
         <Image
           source={require('../imgs/home.png')}
