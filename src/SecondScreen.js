@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {
   StyleSheet,
   Text,
+  Image,
   View
 } from 'react-native';
 
@@ -17,6 +18,10 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     margin: 10,
   },
+  tabIcon: {
+    width: 16,
+    height: 16,
+  },
 });
 
 const SecondScreen = ()  => {
@@ -30,7 +35,13 @@ const SecondScreen = ()  => {
 }
 
 SecondScreen.navigationOptions = {
-  title: 'Second Screen Title',
+  tabBar: {
+      icon: () => (
+        <Image
+          source={require('../imgs/home.png')}
+          style={[styles.tabIcon, {tintColor: 'black'}]}
+        />
+  )}
 };
 
 export default SecondScreen

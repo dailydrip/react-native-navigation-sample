@@ -3,6 +3,7 @@ import {
   StyleSheet,
   Text,
   Button,
+  Image,
   View
 } from 'react-native';
 import { StackNavigator } from 'react-navigation';
@@ -24,22 +25,31 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
+  tabIcon: {
+    width: 16,
+    height: 16,
+  },
 });
 
-const App = (props)  => {
-  const { navigate } = props.navigation;
+const App = ()  => {
 
   return (
     <View style={styles.container}>
       <Text style={styles.welcome}>
         Welcome to React Native Navigation Sample!
       </Text>
-      <Button
-          onPress={() => navigate('SecondScreen')}
-          title="Go to Second Screen"
-        />
     </View>
   );
 }
+
+App.navigationOptions = {
+  tabBar: {
+      icon: () => (
+        <Image
+          source={require('../imgs/home.png')}
+          style={[styles.tabIcon, {tintColor: 'black'}]}
+        />
+  )}
+};
 
 export default App

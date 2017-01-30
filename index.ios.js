@@ -3,26 +3,23 @@ import {
   AppRegistry,
 } from 'react-native';
 import App from './src/App'
-import { StackNavigator } from 'react-navigation';
+import { TabNavigator } from 'react-navigation';
 import SecondScreen from './src/SecondScreen'
 
 class reactNavigationSample extends Component {
-  static navigationOptions = {
-    title: 'Home Screen',
-  };
 
   render(){
     const { navigation } = this.props;
 
     return (
-      <App navigation={ navigation }/>
+      <App />
     );
   }
 }
 
-const SimpleApp = StackNavigator({
-  Home: { screen: reactNavigationSample },
-  SecondScreen: { screen: SecondScreen, title: 'ss' },
+const SimpleApp = TabNavigator({
+  Home: { screen: App },
+  SecondScreen: { screen: SecondScreen }
 });
 
 AppRegistry.registerComponent('reactNavigationSample', () => SimpleApp);
