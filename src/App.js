@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
-const styles = StyleSheet.create({
+const styles = {
   container: {
     flex: 1,
     justifyContent: 'center',
@@ -29,17 +29,26 @@ const styles = StyleSheet.create({
     width: 16,
     height: 16,
   },
-});
+};
 
-const App = ()  => {
-
-  return (
-    <View style={styles.container}>
-      <Text style={styles.welcome}>
-        Welcome to React Native Navigation Sample!
-      </Text>
-    </View>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props); 
+  }  
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.welcome}>
+          Welcome to React Native Navigation Sample!
+        </Text>
+        <Button 
+        title="Press Me"
+        onPress={() => {this.props.navigation.navigate('DrawerOpen')}}>
+        Open the tab
+        </Button>          
+      </View>
+    );
+  }
 }
 
 App.navigationOptions = {

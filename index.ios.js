@@ -12,7 +12,7 @@ class reactNavigationSample extends Component {
     const { navigation } = this.props;
 
     return (
-      <App />
+      <App navigation = {navigation}/>
     );
   }
 }
