@@ -1,32 +1,27 @@
-import React, { Component } from 'react';
-import {
-  StyleSheet,
-  Text,
-  Button,
-  View
-} from 'react-native';
-import { StackNavigator } from 'react-navigation';
+import React, { Component } from "react";
+import { StyleSheet, Text, Button, View } from "react-native";
+import { StackNavigator } from "react-navigation";
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#F5FCFF"
   },
   welcome: {
     fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
+    textAlign: "center",
+    margin: 10
   },
   instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+    textAlign: "center",
+    color: "#333333",
+    marginBottom: 5
+  }
 });
 
-const App = (props)  => {
+const App = props => {
   const { navigate } = props.navigation;
 
   return (
@@ -35,11 +30,11 @@ const App = (props)  => {
         Welcome to React Native Navigation Sample!
       </Text>
       <Button
-          onPress={() => navigate('SecondScreen')}
-          title="Go to Second Screen"
-        />
+        onPress={() => navigate("SecondScreen")}
+        title="Go to Second Screen"
+      />
     </View>
   );
-}
+};
 
-export default App
+export default App;
