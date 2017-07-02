@@ -1,6 +1,9 @@
 # react-native-navigation-sample
 This is a sample of how to use [React Navigation](https://reactnavigation.org/).
 
+To understand it more, [check out this DailyDrip
+video](https://www.dailydrip.com/topics/react-native/drips/getting-started-with-react-navigation).
+
 ## Drawer Navigator
 
 ![Drawer Navigator](gifs/drawer.gif)
